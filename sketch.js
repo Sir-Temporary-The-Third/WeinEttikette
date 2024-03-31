@@ -11,9 +11,9 @@ let winImgFac;
 document.addEventListener("touchstart", {});
 document.addEventListener("touchmoved", {});
 
-function preload() {
+async function preload() {
   coords = loadJSON("coords.json");
-  img = createImg("EmptyBackground.png", "Background");
+  img = await createImg("EmptyBackground.png", "Background");
   img.hide();
   winImg = createImg("Rebstock.jpg", "Rebstock");
   winImg.hide();
