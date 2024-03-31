@@ -11,15 +11,13 @@ let winImgFac;
 document.addEventListener("touchstart", {});
 document.addEventListener("touchmoved", {});
 
-async function preload() {
+function preload() {
   coords = loadJSON("coords.json");
-  img = await createImg("EmptyBackground.png", "Background");
+  img = createImg("EmptyBackground.png", "Background",null, redraw);
   img.hide();
   winImg = createImg("Rebstock.jpg", "Rebstock");
   winImg.hide();
   winImgFac = min(630 / winImg.width, 770 / winImg.height);
-  //img = createImg("Background.png", "Background");
-  //img.hide();
 }
 
 function setup() {
